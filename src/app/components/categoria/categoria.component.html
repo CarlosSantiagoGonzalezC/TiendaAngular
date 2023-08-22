@@ -1,0 +1,23 @@
+<br>
+<div class="w-50" style="margin: 0 auto;">
+    <div class="shadow p-4 mb-4 bg-white">
+        <form [formGroup]="frmCategoria" (ngSubmit)="agregarCategoria(frmCategoria.value)" class="was-validated">
+            <div>
+                <h3 class="text-center">Agregar Categoria</h3>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold" for="txtNombre">Nombre: </label>
+                <input type="text" formControlName="txtNombre" id="txtNombre" class="form-control" value=""
+                    required>
+            </div>
+            <div class="mb-3">
+                <div>
+                    <button class="btn btn-outline-primary mt-3"><i class="fa fa-circle-plus"></i> Agregar</button>
+                </div>
+            </div>
+        </form>
+        <div class="text-center font-weight-bold">
+            {{mensaje}}
+        </div>
+    </div>
+</div>
